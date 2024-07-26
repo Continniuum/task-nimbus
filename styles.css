@@ -1,0 +1,196 @@
+body {
+  font-family: Helvetica, Helvetica;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  position: relative; /* Position relative for absolute positioning of the button */
+  transition: background-color 0.3s;
+}
+
+.container.dark-mode {
+  background: #1e1e1e;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#toggleDarkMode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #111213;
+  border: none;
+  color: rgb(100, 100, 100);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+}
+
+#toggleDarkMode:hover {
+  background: #a3a5a7;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#taskInput,
+#prioritySelect,
+#dueDateInput,
+#tagsInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#taskInput,
+#tagsInput {
+  margin-bottom: 10px;
+}
+
+#addTaskBtn {
+  padding: 10px;
+  background: #a72889;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#addTaskBtn:hover {
+  background: #88215b;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f5f5f5; /* Lighter background for better contrast */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+  box-sizing: border-box;
+  color: #333; /* Dark text for better readability */
+}
+
+li.dragging {
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+button.deleteBtn {
+  background: #dc3545;
+}
+
+button.deleteBtn:hover {
+  background: #c82333;
+}
+
+button.editBtn {
+  background: #007bff;
+  margin-right: 5px;
+}
+
+button.editBtn:hover {
+  background: #0056b3;
+}
+
+input.completeTask {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.tag {
+  background: #007bff;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.dark-mode .tag {
+  background: #333;
+}
+
+.dark-mode li {
+  background: #2c2c2c; /* Darker background for better contrast */
+  color: #e0e0e0; /* Lighter text for better readability */
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    gap: 5px;
+  }
+
+  #addTaskBtn {
+    width: 100%;
+  }
+}

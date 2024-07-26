@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Font Awesome CDN -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <button id="toggleDarkMode" class="icon-button">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <select id="prioritySelect">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input type="date" id="dueDateInput" />
+        <input
+          type="text"
+          id="tagsInput"
+          placeholder="Tags (comma-separated)"
+        />
+        <button id="addTaskBtn">Add</button>
+      </div>
+      <input type="text" id="searchBox" placeholder="Search tasks..." />
+      <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
